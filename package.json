@@ -1,0 +1,48 @@
+{
+  "name": "my-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "next lint --dir src",
+    "lint:fix": "next lint --dir src --fix",
+    "format": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "format:fix": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "db:start": "turbo run start --filter=@my-org/supabase",
+    "db:stop": "turbo run stop --filter=@my-org/supabase",
+    "db:generate": "turbo run generate --filter=@my-org/supabase",
+    "db:reset": "turbo run reset --filter=@my-org/supabase",
+    "test": "turbo run test --output-logs=errors-only",
+    "test:unit": "vitest run",
+    "test:webgl": "vitest run --config vitest.webgl.config.ts",
+    "test:visual": "vitest run --config vitest.visual.config.ts",
+    "test:coverage": "vitest run --coverage",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.117.1",
+    "@react-three/fiber": "^8.17.10",
+    "@types/three": "^0.170.0",
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-jest": "^28.9.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.0.0",
+    "prettier-plugin-tailwindcss": "^0.5.14"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  }
+}

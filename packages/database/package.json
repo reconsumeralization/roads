@@ -1,0 +1,19 @@
+{
+  "name": "@my-org/database",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "generate": "supabase gen types typescript --local > ./src/types.ts",
+    "db:push": "prisma db push",
+    "db:generate": "prisma generate",
+    "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.19.1",
+    "@supabase/supabase-js": "^2.39.0"
+  },
+  "devDependencies": {
+    "prisma": "^5.19.1",
+    "typescript": "^5.5.4"
+  }
+} 
