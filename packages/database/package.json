@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@prisma/client": "^5.19.1",
-    "@supabase/supabase-js": "^2.39.0"
+    "@supabase/supabase-js": "^2.47.8"
   },
   "devDependencies": {
     "prisma": "^5.19.1",
