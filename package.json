@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@react-three/drei": "^9.117.1",
-    "@react-three/fiber": "^8.17.10",
+    "@react-three/fiber": "^8.17.14",
     "@types/three": "^0.170.0",
     "three": "^0.170.0"
   },
